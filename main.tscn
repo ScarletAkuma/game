@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://w551qun0euqt" path="res://kill_z_one.gd" id="6_5vw27"]
 [ext_resource type="AudioStream" uid="uid://dmc18tw6hg62c" path="res://LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://bcghmqpu6w851" path="res://lofibeat.gd" id="8_kek77"]
+[ext_resource type="Texture2D" uid="uid://cv7bjth28tleh" path="res://flag.png" id="9_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("1_h2yge")
@@ -298,7 +299,7 @@ size = Vector2(37, 123)
 size = Vector2(4697, 8.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ticvn"]
-size = Vector2(237, 6)
+size = Vector2(134.35794, 126.34503)
 
 [node name="Node2D" type="Node2D" unique_id=624461120]
 
@@ -362,8 +363,14 @@ position = Vector2(3177, 292)
 [node name="Finish Line" type="StaticBody2D" parent="." unique_id=2051677342]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Finish Line" unique_id=889544827]
-position = Vector2(1408, -309.00003)
+position = Vector2(542.76196, 369.2025)
 rotation = -1.553343
 shape = SubResource("RectangleShape2D_ticvn")
+disabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Finish Line" unique_id=1862369345]
+position = Vector2(542, 365.99997)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("9_kek77")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
