@@ -5,7 +5,7 @@ var friction = 50
 func _ready() -> void:
 	Global.player = self
 
-#TODO: fix trampoline physics
+#TODO: fix trampoline physics#
 func _physics_process(delta):
 	var direction := Input.get_axis("left", "right")
 	if direction and abs(velocity.x) <= 300:
