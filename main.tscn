@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dagqjcrmcynbn" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://by88gqqmruv5l" path="res://tilemapPacck.png" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://qu58y7766xla" path="res://player.png" id="2_h2yge"]
+[ext_resource type="Texture2D" uid="uid://u2yfqp07msbi" path="res://player.png" id="2_h2yge"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("1_h2yge")
@@ -258,6 +258,6 @@ tile_set = SubResource("TileSet_cdmtq")
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=674020692]
-position = Vector2(-14, 65)
-scale = Vector2(2, 2)
+position = Vector2(0, -64)
+scale = Vector2(8, 8)
 texture = ExtResource("2_h2yge")
