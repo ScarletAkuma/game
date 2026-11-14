@@ -1,9 +1,17 @@
 extends CharacterBody2D
 
-#var gravity = ProjectSettings
+var friction = 50
 
-#Jump button
+#Movement
 func _physics_process(delta):
-	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = input_direction * 400
+	var direction := Input.get_axis("ui_left", "ui_right")
+	if direction:
+		velocity.x = direction * 400
+	else:
+		velocity.x = move_toward(velocity.x, 0, friction)
 	move_and_slide()
+	
+	if not is_on_floor():
+		velocity.y += 30
+	else:
+		velocity.y = -600
