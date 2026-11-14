@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://dt0hdm7txouw7"]
+
+[ext_resource type="Script" uid="uid://behx585h154v" path="res://main_menu.gd" id="1_7jlr6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ibl6"]
+bg_color = Color(0.54509807, 0.60784316, 0.6666667, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbtgn"]
+bg_color = Color(0.4679991, 0.6301007, 0.69617444, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MainMenu" type="Control" unique_id=1572348882]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7jlr6")
+
+[node name="Panel" type="Panel" parent="." unique_id=2056324782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5ibl6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=304804078]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.75
+offset_top = -196.0
+offset_right = 310.75
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=1338348452]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pbtgn")
+text = "Start"
+
+[node name="Exit" type="Button" parent="VBoxContainer" unique_id=242721960]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pbtgn")
+theme_override_styles/focus = SubResource("StyleBoxFlat_pbtgn")
+text = "Exit"
+
+[node name="Label" type="Label" parent="." unique_id=966751876]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -254.0
+offset_right = 254.0
+offset_bottom = 101.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 60
+text = "Pogo with the Flow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Exit" to="." method="_on_exit_pressed"]
