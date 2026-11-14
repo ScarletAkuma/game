@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dv0sjn0gytp73" path="res://images.jpg" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://u2yfqp07msbi" path="res://player.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfn25658y43cp" path="res://trampoline.tscn" id="4_1bvp3"]
+[ext_resource type="AudioStream" uid="uid://dyh6vgorxv1bk" path="res://goofy-spring-sound.mp3" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://dwnjwmw62v4cc" path="res://killzone.gd" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
@@ -317,6 +318,10 @@ shape = SubResource("RectangleShape2D_h2yge")
 limit_left = 0
 limit_top = -1000
 limit_bottom = 1500
+
+[node name="boing" type="AudioStreamPlayer2D" parent="Player" unique_id=1241438544]
+stream = ExtResource("4_7mycd")
+volume_db = -21.693
 
 [node name="Label" type="Label" parent="." unique_id=199001872]
 offset_left = 304.0

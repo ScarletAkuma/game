@@ -1,4 +1,5 @@
 extends CharacterBody2D
+@onready var boing: AudioStreamPlayer2D = $boing
 
 var friction = 50
 
@@ -21,6 +22,7 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += 30
 	else:
+		boing.play()
 		if Input.is_action_pressed("jump"):
 			velocity.y = -900
 		else:
