@@ -28,3 +28,8 @@ func _physics_process(delta):
 			velocity.y = -900
 		else:
 			velocity.y = -600
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player"):
+		get_tree().call_deferred("reload_current_scene") # Replace with function body.

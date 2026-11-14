@@ -15,15 +15,15 @@ script = ExtResource("1_cilbb")
 [node name="Area2D" type="Area2D" parent="." unique_id=1972705582]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2032682173]
-position = Vector2(576, 536)
+position = Vector2(-7, -10)
 shape = SubResource("RectangleShape2D_5ibl6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1594891001]
-position = Vector2(576, 556.25)
+position = Vector2(-7, 10.25)
 shape = SubResource("RectangleShape2D_1snj6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1636320882]
-position = Vector2(576, 544)
+position = Vector2(-7, -2)
 scale = Vector2(4, 4)
 texture = ExtResource("2_iocah")
 

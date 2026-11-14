@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://u2yfqp07msbi" path="res://player.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfn25658y43cp" path="res://trampoline.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://dyh6vgorxv1bk" path="res://goofy-spring-sound.mp3" id="4_7mycd"]
-[ext_resource type="Script" uid="uid://dwnjwmw62v4cc" path="res://killzone.gd" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://w551qun0euqt" path="res://kill_z_one.gd" id="6_5vw27"]
 [ext_resource type="AudioStream" uid="uid://dmc18tw6hg62c" path="res://LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://bcghmqpu6w851" path="res://lofibeat.gd" id="8_kek77"]
 
@@ -295,7 +295,7 @@ sources/1 = SubResource("TileSetAtlasSource_1bvp3")
 size = Vector2(37, 123)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ik31s"]
-size = Vector2(4697, 32.5)
+size = Vector2(4697, 8.5)
 
 [node name="Node2D" type="Node2D" unique_id=624461120]
 
@@ -333,22 +333,27 @@ offset_bottom = 247.0
 text = "Hold W to super jump."
 
 [node name="Trampoline" parent="." unique_id=847996565 instance=ExtResource("4_1bvp3")]
-position = Vector2(1632, -128)
+position = Vector2(2207, 417)
 
 [node name="Trampoline2" parent="." unique_id=1924631767 instance=ExtResource("4_1bvp3")]
-position = Vector2(2080, -128)
+position = Vector2(2675, 403)
 
 [node name="Trampoline3" parent="." unique_id=1125013374 instance=ExtResource("4_1bvp3")]
-position = Vector2(176, -376)
-rotation = 0.7853982
+position = Vector2(838, 408)
+rotation = -1.0471976
 
 [node name="Area2D" type="Area2D" parent="." unique_id=356231009]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=192340550]
-position = Vector2(1520.5, 800.75)
+[node name="Kill ZOne" type="CollisionShape2D" parent="Area2D" unique_id=192340550]
+position = Vector2(1545, 934)
 shape = SubResource("RectangleShape2D_ik31s")
-script = ExtResource("5_lquwl")
+script = ExtResource("6_5vw27")
 
 [node name="Lofi" type="AudioStreamPlayer2D" parent="." unique_id=1347151783]
 stream = ExtResource("7_5vw27")
 script = ExtResource("8_kek77")
+
+[node name="Trampoline4" parent="." unique_id=2144733950 instance=ExtResource("4_1bvp3")]
+position = Vector2(3177, 292)
+
+[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
