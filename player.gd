@@ -2,5 +2,6 @@ extends CharacterBody2D
 
 #Jump button
 func _physics_process(delta):
-	if Input.is_action_pressed("jump"):
-		velocity.y = -400
+	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	velocity = input_direction * 400
+	move_and_slide()
