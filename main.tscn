@@ -5,9 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://u2yfqp07msbi" path="res://player.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfn25658y43cp" path="res://trampoline.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://dyh6vgorxv1bk" path="res://goofy-spring-sound.mp3" id="4_7mycd"]
-[ext_resource type="Script" uid="uid://w551qun0euqt" path="res://kill_z_one.gd" id="6_5vw27"]
+[ext_resource type="Script" uid="uid://dwnjwmw62v4cc" path="res://killzone.gd" id="5_lquwl"]
 [ext_resource type="AudioStream" uid="uid://dmc18tw6hg62c" path="res://LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3" id="7_5vw27"]
 [ext_resource type="Script" uid="uid://bcghmqpu6w851" path="res://lofibeat.gd" id="8_kek77"]
+[ext_resource type="Script" uid="uid://soim6dof32yl" path="res://flag.gd" id="9_efxa6"]
 [ext_resource type="Texture2D" uid="uid://cv7bjth28tleh" path="res://flag.png" id="9_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
@@ -298,8 +299,8 @@ size = Vector2(37, 123)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ik31s"]
 size = Vector2(4697, 8.5)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ticvn"]
-size = Vector2(134.35794, 126.34503)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdmtq"]
+size = Vector2(209.22433, 88.145386)
 
 [node name="Node2D" type="Node2D" unique_id=624461120]
 
@@ -346,12 +347,12 @@ position = Vector2(2675, 403)
 position = Vector2(838, 408)
 rotation = -1.0471976
 
-[node name="Area2D" type="Area2D" parent="." unique_id=356231009]
+[node name="Kill Zone" type="Area2D" parent="." unique_id=356231009]
+script = ExtResource("5_lquwl")
 
-[node name="Kill ZOne" type="CollisionShape2D" parent="Area2D" unique_id=192340550]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill Zone" unique_id=192340550]
 position = Vector2(1545, 934)
 shape = SubResource("RectangleShape2D_ik31s")
-script = ExtResource("6_5vw27")
 
 [node name="Lofi" type="AudioStreamPlayer2D" parent="." unique_id=1347151783]
 stream = ExtResource("7_5vw27")
@@ -360,17 +361,18 @@ script = ExtResource("8_kek77")
 [node name="Trampoline4" parent="." unique_id=2144733950 instance=ExtResource("4_1bvp3")]
 position = Vector2(3177, 292)
 
-[node name="Finish Line" type="StaticBody2D" parent="." unique_id=2051677342]
+[node name="Flag" type="Area2D" parent="." unique_id=1507326728]
+script = ExtResource("9_efxa6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish Line" unique_id=889544827]
-position = Vector2(542.76196, 369.2025)
-rotation = -1.553343
-shape = SubResource("RectangleShape2D_ticvn")
-disabled = true
+[node name="Flag" type="CollisionShape2D" parent="Flag" unique_id=1091137733]
+position = Vector2(551.1158, 400.71332)
+rotation = 1.4817846
+shape = SubResource("RectangleShape2D_cdmtq")
 
-[node name="Sprite2D" type="Sprite2D" parent="Finish Line" unique_id=1862369345]
-position = Vector2(542, 365.99997)
+[node name="Sprite2D" type="Sprite2D" parent="Flag" unique_id=1862369345]
+position = Vector2(556, 413.99994)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("9_kek77")
 
-[connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Kill Zone" to="Kill Zone" method="_on_body_entered"]
+[connection signal="body_entered" from="Flag" to="Flag" method="_on_body_entered"]
