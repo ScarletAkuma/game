@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cthhv5labwn2o"
-path="res://.godot/imported/images.png-b603883770f213c0c175102e3045df3b.ctex"
+uid="uid://cnljc6r7eyfxk"
+path="res://.godot/imported/checkered-flag-isolated-png.webp-a7154203ace8f91f772f436a48e5b18a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images.png"
-dest_files=["res://.godot/imported/images.png-b603883770f213c0c175102e3045df3b.ctex"]
+source_file="res://checkered-flag-isolated-png.webp"
+dest_files=["res://.godot/imported/checkered-flag-isolated-png.webp-a7154203ace8f91f772f436a48e5b18a.ctex"]
 
 [params]
 

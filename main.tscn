@@ -297,6 +297,9 @@ size = Vector2(37, 123)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ik31s"]
 size = Vector2(4697, 8.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ticvn"]
+size = Vector2(237, 6)
+
 [node name="Node2D" type="Node2D" unique_id=624461120]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=985201286]
@@ -355,5 +358,12 @@ script = ExtResource("8_kek77")
 
 [node name="Trampoline4" parent="." unique_id=2144733950 instance=ExtResource("4_1bvp3")]
 position = Vector2(3177, 292)
+
+[node name="Finish Line" type="StaticBody2D" parent="." unique_id=2051677342]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish Line" unique_id=889544827]
+position = Vector2(1408, -309.00003)
+rotation = -1.553343
+shape = SubResource("RectangleShape2D_ticvn")
 
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
