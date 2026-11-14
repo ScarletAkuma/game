@@ -1,6 +1,7 @@
 extends CharacterBody2D
 @onready var boing: AudioStreamPlayer2D = $boing
 
+
 var friction = 50
 
 func _ready() -> void:

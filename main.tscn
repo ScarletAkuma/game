@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cfn25658y43cp" path="res://trampoline.tscn" id="4_1bvp3"]
 [ext_resource type="AudioStream" uid="uid://dyh6vgorxv1bk" path="res://goofy-spring-sound.mp3" id="4_7mycd"]
 [ext_resource type="Script" uid="uid://dwnjwmw62v4cc" path="res://killzone.gd" id="5_lquwl"]
+[ext_resource type="AudioStream" uid="uid://dmc18tw6hg62c" path="res://LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3" id="7_5vw27"]
+[ext_resource type="Script" uid="uid://bcghmqpu6w851" path="res://lofibeat.gd" id="8_kek77"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("1_h2yge")
@@ -346,3 +348,7 @@ rotation = 0.7853982
 position = Vector2(1520.5, 800.75)
 shape = SubResource("RectangleShape2D_ik31s")
 script = ExtResource("5_lquwl")
+
+[node name="Lofi" type="AudioStreamPlayer2D" parent="." unique_id=1347151783]
+stream = ExtResource("7_5vw27")
+script = ExtResource("8_kek77")

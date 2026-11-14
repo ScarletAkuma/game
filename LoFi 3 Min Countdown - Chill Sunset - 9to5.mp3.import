@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dmc18tw6hg62c"
+path="res://.godot/imported/LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3-20dd9ee6d03ae2a84bbe6a6b8d35a8af.mp3str"
+
+[deps]
+
+source_file="res://LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3"
+dest_files=["res://.godot/imported/LoFi 3 Min Countdown - Chill Sunset - 9to5.mp3-20dd9ee6d03ae2a84bbe6a6b8d35a8af.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
