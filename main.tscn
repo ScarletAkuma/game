@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dv0sjn0gytp73" path="res://images.jpg" id="1_h2yge"]
 [ext_resource type="Texture2D" uid="uid://u2yfqp07msbi" path="res://player.png" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cfn25658y43cp" path="res://trampoline.tscn" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://dwnjwmw62v4cc" path="res://killzone.gd" id="5_lquwl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1bvp3"]
 texture = ExtResource("1_h2yge")
@@ -290,6 +291,9 @@ sources/1 = SubResource("TileSetAtlasSource_1bvp3")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
 size = Vector2(37, 123)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ik31s"]
+size = Vector2(4697, 32.5)
+
 [node name="Node2D" type="Node2D" unique_id=624461120]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=985201286]
@@ -330,3 +334,10 @@ position = Vector2(2080, -128)
 [node name="Trampoline3" parent="." unique_id=1125013374 instance=ExtResource("4_1bvp3")]
 position = Vector2(176, -376)
 rotation = 0.7853982
+
+[node name="Area2D" type="Area2D" parent="." unique_id=356231009]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=192340550]
+position = Vector2(1520.5, 800.75)
+shape = SubResource("RectangleShape2D_ik31s")
+script = ExtResource("5_lquwl")
