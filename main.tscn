@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://buaq673iyr04d"]
+[gd_scene format=4 uid="uid://buaq673iyr04d"]
 
 [ext_resource type="Script" uid="uid://dagqjcrmcynbn" path="res://player.gd" id="1_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://dv0sjn0gytp73" path="res://images.jpg" id="1_h2yge"]
@@ -204,14 +204,15 @@ sources/1 = SubResource("TileSetAtlasSource_1bvp3")
 [node name="Node2D" type="Node2D" unique_id=624461120]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=985201286]
-tile_map_data = PackedByteArray(0, 0, 254, 255, 1, 0, 1, 0, 12, 0, 9, 0, 0, 0, 255, 255, 1, 0, 1, 0, 12, 0, 9, 0, 0, 0, 0, 0, 1, 0, 1, 0, 12, 0, 9, 0, 0, 0, 1, 0, 1, 0, 1, 0, 12, 0, 9, 0, 0, 0)
+tile_map_data = PackedByteArray("AAASAA4AAQAKAAYAAAATAA4AAQAKAAYAAAAUAA4AAQAKAAYAAAAVAA4AAQAKAAYAAAAWAA4AAQAKAAYAAAAXAA4AAQAKAAYAAAAYAA4AAQAKAAYAAAAZAA4AAQAKAAYAAAA=")
 tile_set = SubResource("TileSet_cdmtq")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=2101166800]
+position = Vector2(693, 414)
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=674020692]
-position = Vector2(0, -64)
+position = Vector2(2, -67)
 scale = Vector2(8, 8)
 texture = ExtResource("2_h2yge")
 
