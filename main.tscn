@@ -335,6 +335,7 @@ offset_left = 304.0
 offset_top = 224.0
 offset_right = 477.0
 offset_bottom = 247.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Hold W to super jump."
 
 [node name="Trampoline" parent="." unique_id=847996565 instance=ExtResource("4_1bvp3")]
@@ -385,6 +386,14 @@ position = Vector2(1498, -370)
 [node name="Trampoline8" parent="." unique_id=1023246263 instance=ExtResource("4_1bvp3")]
 position = Vector2(1352, -433)
 rotation = -0.63529986
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1383351368]
+z_index = -20
+offset_left = -284.0
+offset_top = -1143.0
+offset_right = 4278.0
+offset_bottom = 930.0
+color = Color(0.9138824, 0.9353209, 0.75044256, 1)
 
 [connection signal="body_entered" from="Kill Zone" to="Kill Zone" method="_on_body_entered"]
 [connection signal="body_entered" from="Flag" to="Flag" method="_on_body_entered"]
