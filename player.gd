@@ -9,6 +9,7 @@ func _ready() -> void:
 
 #TODO: fix trampoline physics#
 func _physics_process(delta):
+	var sfx = Global.sound
 	var direction := Input.get_axis("left", "right")
 	if direction and abs(velocity.x) <= 300:
 		velocity.x = direction * 300
@@ -23,8 +24,12 @@ func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += 30
 	else:
-		boing.play()
+		if sfx:
+			boing.play()
 		if Input.is_action_pressed("jump"):
 			velocity.y = -900
 		else:
 			velocity.y = -600
+	
+	if Input.is_action_pressed("pause"):
+		get_tree().change_scene_to_file("res://pause.tscn")

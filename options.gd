@@ -9,8 +9,10 @@ func _on_hard_mode_toggle_toggled(toggled_on: bool) -> void:
 func _on_sound_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		$VBoxContainer/sound.text = "Sound: On"
+		Global.sound = true
 	else:
 		$VBoxContainer/sound.text = "Sound: Off"
+		Global.sound = false
 
 func _on_exit_pressed() -> void:
 	get_tree().change_scene_to_file("res://Main menu.tscn")
