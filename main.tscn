@@ -307,10 +307,10 @@ position = Vector2(2128, 680)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1383351368]
 z_index = -20
-offset_left = -2735.0
-offset_top = -1193.0
-offset_right = 4368.0
-offset_bottom = 838.0
+offset_left = -2792.0
+offset_top = -1048.0
+offset_right = 4311.0
+offset_bottom = 983.0
 color = Color(0.9138824, 0.9353209, 0.75044256, 1)
 metadata/_edit_use_anchors_ = true
 
@@ -324,12 +324,12 @@ position = Vector2(-1111, 399)
 script = ExtResource("1_0xm2m")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=674020692]
-position = Vector2(2, -67)
+position = Vector2(39, -39)
 scale = Vector2(8, 8)
 texture = ExtResource("2_h2yge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=614406060]
-position = Vector2(1, -65)
+position = Vector2(38, -37)
 shape = SubResource("RectangleShape2D_h2yge")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1304424021]
