@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://dt0hdm7txouw7"]
 
 [ext_resource type="Script" uid="uid://behx585h154v" path="res://main_menu.gd" id="1_7jlr6"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5ibl6"]
-bg_color = Color(0.54509807, 0.60784316, 0.6666667, 1)
+[ext_resource type="Texture2D" uid="uid://cofii6ggipbod" path="res://title.png" id="2_enwfr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbtgn"]
 bg_color = Color(0.4679991, 0.6301007, 0.69617444, 1)
@@ -21,14 +19,10 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_7jlr6")
 
-[node name="Panel" type="Panel" parent="." unique_id=2056324782]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5ibl6")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1785054796]
+position = Vector2(961, 543.4322)
+scale = Vector2(1.3979591, 1.4218482)
+texture = ExtResource("2_enwfr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=304804078]
 layout_mode = 1
@@ -95,20 +89,6 @@ theme_override_styles/disabled = SubResource("StyleBoxFlat_pbtgn")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_pbtgn")
 theme_override_styles/focus = SubResource("StyleBoxFlat_pbtgn")
 text = "Exit"
-
-[node name="Label" type="Label" parent="." unique_id=966751876]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -254.0
-offset_right = 254.0
-offset_bottom = 101.0
-grow_horizontal = 2
-theme_override_font_sizes/font_size = 60
-text = "Pogo with the Flow"
-horizontal_alignment = 1
-vertical_alignment = 1
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
