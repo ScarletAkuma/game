@@ -7,18 +7,25 @@ var friction = 50
 func _ready() -> void:
 	Global.player = self
 
-#TODO: fix trampoline physics#
+#Player velocity
 func _physics_process(delta):
 	var sfx = Global.sound
+	var hardmode = Global.hardMode
 	var direction := Input.get_axis("left", "right")
-	if direction and abs(velocity.x) <= 300:
-		velocity.x = direction * 300
-	elif direction:
+	if direction and abs(velocity.x) <= 300: #Moving speed + key press
+		if hardmode == true:
+			velocity.x = move_toward(velocity.x, direction * 300, friction/3)
+		else:
+			velocity.x = direction * 300
+	elif direction: #Fast movement via trampoline
 		velocity.x = move_toward(velocity.x, 0, friction/5)
 	elif abs(velocity.x) >= 300:
 		velocity.x = move_toward(velocity.x, 0, friction/5)
-	else:
-		velocity.x = move_toward(velocity.x, 0, friction)
+	else: #No direction
+		if hardmode == true:
+			velocity.x = move_toward(velocity.x, 0, friction/5)
+		else:
+			velocity.x = move_toward(velocity.x, 0, friction)
 	move_and_slide()
 	
 	if not is_on_floor():

@@ -1,10 +1,15 @@
 extends Control
 
+func _ready() -> void:
+	var state = true
+
 func _on_hard_mode_toggle_toggled(toggled_on: bool) -> void:
 	if toggled_on:
 		$VBoxContainer/hardMode.text = "Hard mode: On"
+		Global.hardMode = true
 	else:
 		$VBoxContainer/hardMode.text = "Hard mode: Off"
+		Global.hardMode = false
 
 func _on_sound_toggled(toggled_on: bool) -> void:
 	if toggled_on:
